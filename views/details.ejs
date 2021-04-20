@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer></footer>
+    <main>
+        <div>
+        <a href=""><h1><%=data.name%></h1></a>
+       <img src="<%=data.img%>" alt="">
+       <p><%=data.haircolour%></p>
+       <form action="/details/<%=data.id%>?_method=delete" method="POST">
+        <input type="hidden" name="id" value="<%=data.id%>">
+           <button>delete</button>
+       </form>
+
+       <form action="/details/<%=data.id%>?_method=put" method="POST">
+           <input type="hidden" name="id" value="<%=data.id%>">
+           <input type="text" name="name" value="<%=data.name%>">
+           <input type="text" name="img" value="<%=data.img%>">
+           <input type="text" name="color" value="<%=data.haircolour%>">
+           <button>edit</button>
+       </form>
+    </div>
+    </main>
+    <header></header>
+</body>
+</html>

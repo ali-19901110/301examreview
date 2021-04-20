@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+       
+        <% data.forEach(el=>{%>
+         <form action="/allchar" method="POST">
+        <div>
+        <h1><%=el.name%></h1>
+        <input type="hidden" name="name" value="<%=el.name%>">
+        <img src="<%=el.image%>" alt="">
+        <input type="hidden" name="img" value="<%=el.image%>">
+        <p><%=el.hairColour%></p>
+        <input type="hidden" name="color" value="<%=el.hairColour%>">
+    </div>
+    <button type="submit">savetodatabase</button>
+    </form>
+   <% })%>
+    </main>
+    <footer></footer>
+</body>
+</html>
